@@ -39,6 +39,9 @@ dependencies:
   path: ^1.8.0
   google_fonts: ^2.1.0
   flutter_signin_button: ^2.0.0
+  firebase_auth: ^3.1.4
+  firebase_core: ^1.8.0
+  validatorless: ^1.2.1
 
 dev_dependencies:
   flutter_test:
@@ -78,10 +81,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: TodoListIcons
+      fonts:
+        - asset: assets/fonts/TodoListIcons.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro
