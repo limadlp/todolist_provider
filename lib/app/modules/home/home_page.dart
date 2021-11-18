@@ -71,9 +71,14 @@ class _HomePageState extends State<HomePage> {
             icon: const Icon(
               TodoListIcons.filter,
             ),
-            itemBuilder: (_) => const [
+            onSelected: (value) {
+              widget._homeController.showOrHideFinishedTasks();
+            },
+            itemBuilder: (_) => [
               PopupMenuItem<bool>(
-                child: Text('Mostrar tarefas concluidas'),
+                value: true,
+                child: Text(
+                    '${widget._homeController.showFinishedTasks ? 'Esconder' : 'Mostrar'} tarefas concluidas'),
               ),
             ],
           ),
@@ -101,7 +106,6 @@ class _HomePageState extends State<HomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
-                    Text('Teste'),
                     HomeHeader(),
                     HomeFilters(),
                     HomeWeekFilter(),
